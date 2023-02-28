@@ -1,133 +1,173 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 :root {
-  --color-red: #dd7f6e;
-  --color-cyan: #26c0ab;
-  --color-cyan-light: #a1e8e0;
-  --color-cyan-0: #f4fafa;
-  --color-cyan-1: #c5e4e7;
-  --color-cyan-4: #00494d;
+	--color-red: #051458;
+	--color-cyan: #ec7606;
+	--color-cyan-light: #a1e8e0;
+	--color-cyan-0: #f4fafa;
+	--color-cyan-1: #60676d;
+	--color-cyan-4: #ffffff;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 *:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.1rem var(--color-cyan);
+	outline: none;
+	box-shadow: 0 0 0 0.1rem var(--color-cyan);
 }
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-  font-family: "Space Mono", sans-serif;
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  color: var(--color-cyan-4);
-  background-color: var(--color-cyan-light);
-  background: radial-gradient(var(--color-red), var(--color-cyan-1));
-  /* background: radial-gradient(var(--color-red), var(--color-cyan-4)); */
+	font-family: "Space Mono", sans-serif;
+	font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	color: var(--color-cyan-4);
+	background-color: var(--color-cyan-light);
+	background: radial-gradient(var(--color-red), var(--color-cyan-1));
+	/* background: radial-gradient(var(--color-red), var(--color-cyan-4)); */
+}
+
+h2 {
+	color: #c5e4e7;
+	margin-bottom: 2rem;
+	text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
 }
 
 .clock-box {
-  position: relative;
-  width: 40rem;
-  height: 40rem;
-  border-radius: 50%;
-  border: 1px solid var(--color-red);
-  background-color: var(--color-cyan-4);
-  background: radial-gradient(var(--color-red), var(--color-cyan-1));
+	position: relative;
+	width: 40rem;
+	height: 40rem;
+	border-radius: 50%;
+	border: 1px solid var(--color-red);
+	background-color: var(--color-cyan-4);
+	background: radial-gradient(var(--color-red), var(--color-cyan-1));
 }
 
 .clock-box::before {
-  content: "";
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 1px solid var(--color-cyan-0);
-  background-color: var(--color-red);
-  z-index: 5;
+	content: "";
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	border: 1px solid var(--color-cyan-0);
+	background-color: var(--color-red);
+	z-index: 5;
 }
 
 .number {
-  --rotation: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  transform: rotate(var(--rotation));
+	--rotation: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	transform: rotate(var(--rotation));
 }
 .hand {
-  --rotation: 0;
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border: 1px solid var(--color-cyan-0);
-  background-color: var(--color-cyan);
-  transform-origin: bottom;
-  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+	--rotation: 0;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 1px solid var(--color-cyan-0);
+	background-color: var(--color-cyan);
+	transform-origin: bottom;
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 
 .seconds {
-  width: 0.3rem;
-  height: 45%;
-  background-color: var(--color-red);
+	width: 0.3rem;
+	height: 45%;
+	background-color: var(--color-red);
 }
 
 .minutes {
-  width: 0.5rem;
-  height: 40%;
+	width: 0.5rem;
+	height: 40%;
 }
 
 .hours {
-  width: 0.7rem;
-  height: 35%;
+	width: 0.7rem;
+	height: 35%;
 }
 
 .number1 {
-  --rotation: 30deg;
+	--rotation: 30deg;
 }
 .number2 {
-  --rotation: 60deg;
+	--rotation: 60deg;
 }
 .number3 {
-  --rotation: 90deg;
+	--rotation: 90deg;
 }
 .number4 {
-  --rotation: 120deg;
+	--rotation: 120deg;
 }
 .clock-box .number5 {
-  --rotation: 150deg;
+	--rotation: 150deg;
 }
 .number6 {
-  --rotation: 180deg;
+	--rotation: 180deg;
 }
 .number7 {
-  --rotation: 210deg;
+	--rotation: 210deg;
 }
 .number8 {
-  --rotation: 240deg;
+	--rotation: 240deg;
 }
 .number9 {
-  --rotation: 270deg;
+	--rotation: 270deg;
 }
 .number10 {
-  --rotation: 300deg;
+	--rotation: 300deg;
 }
 .number11 {
-  --rotation: 330deg;
+	--rotation: 330deg;
+}
+
+/* digital clock style  */
+.container {
+	margin-top: 2rem;
+}
+.clock {
+	color: white;
+	width: 450px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+}
+.showDate {
+	display: flex;
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+}
+.days {
+	font-size: 2.2rem;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+.month,
+.date,
+.year {
+	padding: 0 5px;
+	letter-spacing: 2px;
+}
+
+.time {
+	font-size: 2.6rem;
+	font-weight: 600;
 }
